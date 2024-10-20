@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import Login from "./components/Login";
 import App from "./App";
 import Register from "./components/Register";
+import Home from "./components/Home";
 
 const router = createBrowserRouter([
    {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
          {
             path: "register",
             element: <Register />,
+         },
+         {
+            path: "home",
+            element: <Home />,
          },
       ],
    },

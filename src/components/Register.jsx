@@ -1,15 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useAsyncValue, useNavigate } from "react-router-dom";
+import { signUp } from "../firebase/utils";
 
 const Register = () => {
-   const [data, setData] = useState({});
+   const navigate = useNavigate();
+   const [data, setData] = useState({
+      fullName: "",
+      email: "",
+      password: "",
+   });
    const [error, setError] = useState("");
 
    const handleInput = (e) => {
       setData({ ...data, [e.target.name]: e.target.value });
    };
 
-   const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
       e.preventDefault();
       setError("");
 
@@ -30,9 +36,14 @@ const Register = () => {
          return;
       }
 
-      // API call to register the user
-      alert("Registration successful");
- 
+      try {
+         await signUp(data.fullName, data.email, data.password);
+         setData(null);
+         navigate('/login');
+      } catch (err) {
+         setError(err.message);
+      }
+
    };
 
    return (

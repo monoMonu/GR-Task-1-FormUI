@@ -1,16 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signIn } from "../firebase/utils";
 
 const Login = () => {
 
-   const [data, setData] = useState({});
+   const navigate = useNavigate();
+   const [data, setData] = useState({
+      email: "",
+      password: "",
+   });
    const [error, setError] = useState("");
 
    const handleInput = (e) => {
       setData({ ...data, [e.target.name]: e.target.value });
    }
 
-   const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
       e.preventDefault();
       setError("")
 
@@ -25,8 +30,13 @@ const Login = () => {
          return;
       }
 
-      // API call to login
-      alert("Login Successful");
+      try {
+         await signIn(data.email, data.password);
+         setData(null);
+         navigate('/home');
+      } catch (err) {
+         setError(err.message);
+      }
    }
 
    return (
