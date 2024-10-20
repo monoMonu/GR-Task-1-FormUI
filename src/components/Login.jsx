@@ -95,16 +95,16 @@ const Login = () => {
 
                {/* Social Icons */}
                <div className="flex space-x-4 mb-4">
-                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-900">
+                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-800">
                      <i className="fab fa-instagram text-pink-600 text-xl" ></i>
                   </a>
-                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-900">
+                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-800">
                      <i className="fab fa-facebook text-blue-600 text-xl"></i>
                   </a>
-                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-900">
+                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-800">
                      <i className="fab fa-google text-red-500 text-xl"></i>
                   </a>
-                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-900">
+                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-800">
                      <i className="fab fa-twitter text-blue-400 text-xl"></i>
                   </a>
                </div>

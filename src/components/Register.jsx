@@ -50,8 +50,11 @@ const Register = () => {
          </div>
 
          {/* Right Section */}
-         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-8">
-            <div className="w-full max-w-md flex flex-col justify-center items-center">
+         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-5 relative">
+            <div className="relative w-full max-w-md flex flex-col justify-center items-center p-6 z-20">
+               <div className="w-36 h-36 rounded-full bg-gradient-to-b from-red-500 to-red-400 absolute -z-20 left-[78%] top-[10%]"></div>
+               <div className="w-36 h-36 rounded-full bg-gradient-to-b from-blue-700 to-indigo-700 absolute -z-20 left-[-5%] bottom-[10%]"></div>
+               <div className="w-full h-full rounded-lg -z-10 absolute top-0 left-0 bg-[#00000010] backdrop-blur-xl"></div>
                <h2 className="text-4xl font-extrabold mb-3 text-left w-full">Create an Account</h2>
                <p className="mb-8 text-left w-full">Sign up to start your journey</p>
 
@@ -113,16 +116,16 @@ const Register = () => {
 
                {/* Social Icons */}
                <div className="flex space-x-4 mb-4">
-                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-500">
-                     <i className="fab fa-instagram text-pink-600 text-xl"></i>
+                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-800">
+                     <i className="fab fa-instagram text-pink-600 text-xl" ></i>
                   </a>
-                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-500">
+                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-800">
                      <i className="fab fa-facebook text-blue-600 text-xl"></i>
                   </a>
-                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-500">
+                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-800">
                      <i className="fab fa-google text-red-500 text-xl"></i>
                   </a>
-                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-500">
+                  <a href="/" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-[3px] border-gray-700 hover:bg-gray-800">
                      <i className="fab fa-twitter text-blue-400 text-xl"></i>
                   </a>
                </div>
